@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+  background-position: center;
+  background-image: url('/img/site-background.jpg');
+}
+
+.sign {
+  width: 16em;
+  float: right; /* Выравнивание по правому краю */
+  border: 1px solid #333; /* Параметры рамки */
+  padding: 7px; /* Поля внутри блока */
+  margin: 10px 0 5px 5px; /* Отступы вокруг */
+  background: #f0f0f0; /* Цвет фона */ 
+ }
+ .sign figcaption {
+  margin: 0 auto 5px; /* Отступы вокруг абзаца */
+ }
+
+/* Header/logo Title */
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #2846a8;
+  color: #7181b6;
+}
+    
+.navbar1 {
+  display: flex;
+    justify-content: left;
+}
+
+/* Style the navigation bar links */
+.navbar1 a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar1 a:hover {
+  background-color: #ddd;
+  color: #5a6485;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #2846a8;
+  justify-content: left;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.selected {
+  background-color: darkblue;
+  color: black !important; 
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  background: rgb(14,98,182);
+  background: linear-gradient(90deg, rgba(14,98,182,1) 0%, rgba(200,217,242,1) 100%);
+  padding: 20px;
+  height: auto;
+}
+
+.side h3 {
+    display: flex;
+    justify-content: left;
+    color: #333;
+}
+
+.side ol li a {
+    text-decoration: none;
+}
+
+.side ol li {
+    padding: 5px 0;
+}
+
+/* Main column */
+.main {
+  font-size: 20px;
+  flex: 70%;
+  padding: 20px;
+}
+
+.historyContentSecondPart ul li {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: rgb(14,98,182);
+}
+
+.footerContainer a {
+    font-size: 20px;
+    padding: 10px;
+    background: #0e80ccbd;
+    color: white;
+    text-decoration: none;
+}
+.dropbtn {
+  background-color: #043557bd;
+  border-radius: 0px 20px 20px 0px;
+  color: cornflowerblue;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2846a8;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  width: 100%;
+  background-color: #2846a8;
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2846a8;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0%, 7%, 76%, 1); 
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #2846a8}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 720px) {
+  .row, .navbar, .navbar1 {   
+    flex-direction: column;
+  }
+  .sign
+  {
+    width: 95%;
+    float: center;
+   
+  }
+}
+@media screen and (max-width: 370px) {
+  .row, .navbar, .navbar1,.sign, .side {   
+    font-size:14px;
+  }
+ 
+}

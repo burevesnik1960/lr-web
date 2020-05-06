@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+    background-position: center;
+    background-image: url('/img/site-background.jpg');
+}
+#showNavbar {
+  display: none;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #2846a8;
+  color: #7181b6;
+}
+    
+.navbar1 {
+  display: flex;
+    justify-content: left;
+}
+
+/* Style the navigation bar links */
+.navbar1 a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar1 a:hover {
+  background-color: #ddd;
+  color: #5a6485;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #2846a8;
+  justify-content: left;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.selected {
+  background-color: #ddd;
+  color: black !important; 
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  background: rgb(14,98,182);
+  background: linear-gradient(90deg, rgba(14,98,182,1) 0%, rgba(200,217,242,1) 100%);
+  padding: 20px;
+  height: auto;
+}
+
+.side h3 {
+    display: flex;
+    justify-content: left;
+    color: #333;
+}
+.centralPhoto{
+  width: 20%;
+  float: center; /* Выравнивание по правому краю */
+  border: 1px solid #333; /* Параметры рамки */
+  padding: 7px; /* Поля внутри блока */
+  margin: 10px 0 5px 5px; /* Отступы вокруг */
+  background: #f0f0f0; /* Цвет фона */ 
+}
+.sign {
+  
+  width: 16em;
+  float: right; /* Выравнивание по правому краю */
+  border: 1px solid #333; /* Параметры рамки */
+  padding: 7px; /* Поля внутри блока */
+  margin: 10px 0 5px 5px; /* Отступы вокруг */
+  background: #f0f0f0; /* Цвет фона */ 
+ }
+ .sign figcaption {
+  margin: 0 auto 5px; /* Отступы вокруг абзаца */
+ }
+
+.side ol li a {
+    text-decoration: none;
+}
+
+.side ol li {
+    padding: 5px 0;
+}
+
+/* Main column */
+.main {
+  font-size: 20px;
+  flex: 70%;
+  padding: 20px;
+}
+
+.historyContentSecondPart ul li {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: rgb(14,98,182);
+}
+
+.footerContainer a {
+    font-size: 20px;
+    padding: 10px;
+    background: #0e80ccbd;
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 720px) {
+  .row, .navbar, .navbar1 {   
+    flex-direction: column;
+  }
+  .sign
+  {
+    width: 95%;
+    float: center;
+   
+  }
+}
+@media screen and (max-width: 370px) {
+  .row, .navbar, .navbar1,.sign, .side {   
+    font-size:14px;
+  }
+ 
+}

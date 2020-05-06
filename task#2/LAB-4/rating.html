@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IOS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/rating.css" rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#" onClick="toggleNavigation()">Навігація</a>
+</div>
+<div id="showNavbar">
+  <div class="navbar">
+    <a href="./index.html" class="selected">Скорочена довідка</a>
+    <a href="./history.html">Історія створення та версії</a>
+    <a href="./specials.html">Особливості</a>
+    <a href="#" class="selected">Конкуруючі продукти</a>
+  </div>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+  <div class="side">
+    <h3>Довідка</h3>
+            <li><a href="rating.html#developed">Переваги Android</a></li>
+            <li><a href="rating.html#version">Недоліки Android</a></li>
+  </div>
+  <div class="main">
+      <h1>Android</h1>
+                <h2 id="developed">Переваги</h2>
+                <hr>
+                <div class="historyContent" >
+                    <div class="historyContentFirstPart">
+                        <p>Деякі користувачі відзначають, що Android проявляє себе краще одного зі своїх конкурентів, Apple iOS, в ряді особливостей, таких як веб-серфінг, інтеграція з сервісами Google і інших. Також Android, на відміну від iOS, є відкритою платформою, що дозволяє реалізувати на ній більше функцій.</p>
+                        
+                        <ol>
+                            <li>Незважаючи на початкову заборону на установку програм з «неперевірених джерел» (наприклад, з карти пам'яті), це обмеження відключається штатними засобами в налаштуваннях пристрою, що дозволяє встановлювати програми на телефони та планшети без інтернет-підключення (наприклад, користувачам, які не мають Wi-Fi-точки доступу і не бажають витрачати гроші на мобільний інтернет, який зазвичай коштує дорого), а також дозволяє будь-кому безкоштовно писати програми для Android і тестувати на своєму пристрої.</li>
+                            <li>Android доступний для різних апаратних платформ, таких як ARM, MIPS, x86.</li>
+                            <li>Існують альтернативні Google Play магазини додатків: Amazon Appstore, Opera Mobile Store, GetUpps!, F-Droid.</li>
+                            <li>У версії 4.3 з'явилась підтримка багатокористувацького режиму.</li>
+                            <li>Мультизадачнысть, мультивыконысть.</li>
+                        </ol>
+                    </div>
+                </div>
+                <h2 class="hTeg" id="version">Критика</h2>
+                <hr>
+                <div class="historyContentSecondPart">
+                    <ol>
+                            <li>Платформа базується на Java</li>
+                            <li>Монолітна основа</li>
+                            <li>Конкуренти Android виступили з критикою платформи, звинувачуючи її в надмірній фрагментації, що створює перешкоди розробникам. Google спростувала всі звинувачення, заявивши, що ніяких подібних проблем немає.</li>
+                            <li>Щоб користувачі телефонів мали доступ до Google Play та інших сервісів від Google, виробники цих телефонів мають укласти контракт з Google на використання відповідного пропрієтарного програмного забезпечення.</li>
+                        </ol>
+                </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footerContainer">
+        <h2>Відомості про автора</h2>
+        <span><a href="/media/bur1960/C898281098280014/Навчання/WEB-програмування/LAB-4/web_labs-master/index.html">Маєвський Ярослав ІПЗ-17</a></span>
+      </div>
+      <p id="quote"></p>
+  </div>
+  <script>
+    var isTrue = 0;
+     
+    function toggleNavigation() {
+        if (isTrue === 0) {
+             document.getElementById('showNavbar').style.display = 'block';
+            isTrue = 1;
+         } else {
+             document.getElementById('showNavbar').style.display = 'none';
+            isTrue = 0; 
+         }
+    }
+     
+     
+     let quotes = [
+     "Be yourself; everyone else is already taken.",
+     "So many books, so little time.",
+     "Be the change that you wish to see in the world.",
+     "A room without books is like a body without a soul.",
+     "In three words I can sum up everything I've learned about life: it goes on.",
+     "If you tell the truth, you don't have to remember anything.",
+     "A friend is someone who knows all about you and still loves you.",
+     ];
+
+     let randomQuote = quotes[Math.floor(Math.random()*quotes.length)];
+     document.getElementById("quote").innerHTML = randomQuote;
+ </script>
+  
+</body>
+</html>
